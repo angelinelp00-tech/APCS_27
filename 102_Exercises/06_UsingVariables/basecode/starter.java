@@ -2,7 +2,6 @@
  *	Author:  
  *  Date: 
 */
-import pkg.*;
 import java.util.Scanner;
 
 class starter {
