@@ -104,7 +104,7 @@ public class starter {
 				else{
 					System.out.println("You burst through the backdoor and into the alley behind the cafe.");
 					System.out.println("You hear a click near your head and turn around.");
-					System.out.println("An man has a weapon pointed at you and flashes his badge, and says “womp womp”.");
+					System.out.println("A man has a weapon pointed at you and flashes his badge, and says “womp womp”.");
 					System.out.println("MISSION OVER");
 				}
 			}
