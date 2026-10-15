@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Angeline Peng
+ *  Date: 10/14/26
 */
 
 import java.util.Scanner;
@@ -22,10 +22,12 @@ class starter {
 	public static int pow(int a, int b){
 		int x = a;
 		int y = b;
+		int pow = x;
 		int count = 1;
-		while(y >= count){
-			x = x * x;
+		while(y > count){
+			pow = pow * x;
+			count = count + 1;
 		}
-		return x;
+		return pow;
 	}
 }

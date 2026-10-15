@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Angeline Peng
+ *  Date: 10/15/26
 */
 
 import java.io.*;
@@ -14,8 +14,52 @@ class starter {
 
 	public static void main(String args[]) throws InterruptedException {
 		// Write your code here!
+		Scanner sc = new Scanner(System.in);
 
-		
+		System.out.println("\n\n\n\n\nWelcome to Type Quest!");
+		System.out.println("The goal is to type a sentence as fast as possible.");
+		System.out.println("(press ENTER to confirm any answer)");
+		System.out.println("\nDo you want a random sentence to type or would you like to choose?");
+		System.out.print("Enter 1 for your choice or any other number for random: ");
+		int choice = sc.nextInt();
+		sc.nextLine();
+		String given = "";
+		if(choice == 1){
+			System.out.print("\nEnter a number 1-100 to choose your sentence: ");
+			int sNum = sc.nextInt();
+			sc.nextLine();
+			System.out.println("-------------------------------------------");
+			populateArrayList();
+			given = getSentence(sNum);
+			System.out.println("\nYour sentence: " + given);
+			System.out.println("Number of words in sentence: " + wordsInSentence(given));
+			System.out.println("Number of characters in sentence: " + lettersInSentence(given));
+		}
+		else{
+			populateArrayList();
+			given = getSentence();
+			System.out.println("-------------------------------------------");
+			System.out.println("\nYour sentence: " + given);
+			System.out.println("Number of words in sentence: " + wordsInSentence(given));
+			System.out.println("Number of characters in sentence: " + lettersInSentence(given));
+		}
+		System.out.println("\nYour sentence will be shown under the 'press ENTER' instructions for reference.");
+		System.out.print("Press ENTER when you are ready to start the race.");
+		String ready = sc.nextLine();
+		System.out.println("");
+		countdown();
+		startTimer();
+		System.out.println("Your sentence: " + given);
+		System.out.print("Type: ");
+		String typed = sc.nextLine();
+		double time = endTimer();
+
+		System.out.println("--------------------------------------------------------");
+		System.out.println("Time: " + time);
+		System.out.println("Number of errors: " + compareSentences(given, typed));
+				
+
+
 	}
 
 	// This method returns the local current time as a String

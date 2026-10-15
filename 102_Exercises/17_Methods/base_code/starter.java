@@ -1,6 +1,6 @@
 /*
- *	Author:
- *  Date:
+ *	Author: Angeline Peng
+ *  Date: 10/13/26
  * 	Collaborator(s): 
 */
 import java.util.Scanner;
@@ -15,6 +15,31 @@ class starter {
 	// The goal of the third method is to check if 3 numbers are consecutive. 15 16 17 are consecutive. It will print if they are or not.
 	// Assume that the first number is always the smallest and the third number is always the largest.
 
+	public static boolean isLeapYear( int year){
+		boolean isLeapYear = false;
+		if(year%4 == 0){
+			isLeapYear = true;
+		}
+		return isLeapYear;
+	}
+	public static int getDigitSum(int number){
+		int num = 0;
+		while(number > 0){
+			int num2 = number % 10;
+			num = num + num2;
+			number = number / 10;
+		}
+		return num;
+	}
+	public static void printIfConsecutive(int num1, int num2, int num3){
+		if(num1 - num2 == -1 && num2 - num3 == -1){
+			System.out.println(num1 + ", " + num2 + ", and " + num3 + " are consecutive.");
+		}
+		else{
+			System.out.println(num1 + ", " + num2 + ", and " + num3 + " are NOT consecutive.");
+		}
+		return;
+	}
 	public static void main(String args[]) {
 		System.out.println("----------------------------------------");
 		Scanner sc = new Scanner(System.in);
