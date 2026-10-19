@@ -1,6 +1,6 @@
 /*
  *	Author: Angeline Peng
- *  Date:
+ *  Date: 10/16/26
  *	Collaborator(s):
 */
 
@@ -10,6 +10,8 @@ import java.util.Scanner;
 class starter {
 	public static void main(String args[]) {
 		// Your code goes below here
+		Scanner sc = new Scanner(System.in);
+
 		System.out.println(Cipher.encode("6v lvp u5vuy5 y1z5 qpsqy5r"));
 		System.out.println(Cipher.encode("sv8vq17r 1r q25 85rq"));
 		System.out.println(Cipher.encode("q25 z5l qv wpx85s f 1r gg"));
@@ -18,8 +20,12 @@ class starter {
 		System.out.println(Cipher.keyedEncode("a8 1oy 92 1kx rxdj in 4", 8));
 		System.out.println(Cipher.keyedEncode("12xgx2cy g3d e98e6c3 gzc 4s bgv2z8xc vgz8gf5c 3g4cy", 29));
 		System.out.println(Cipher.encode("lvpo5 rp775rr4pyyl 7vxuy5q56 q25 41srq r57q1vw"));
-		System.out.println(Cipher.keyedEncode("u4y i1e i5 i6ita5c 314c1i66e1 i5f by6i5 hea5c zbi58 u4y", 29));
-		System.out.println(Cipher.keyedEncode("amlb mfhp7fcj jlgq fo tap s9a bjlslql aflipa lb hlg9b 210z t9ct", 29));
+		System.out.println(Cipher.keyedEncode("u4y i1e i5 i6ita5c 314c1i66e1 i5f by6i5 hea5c zbi58 u4y", 27));
+		System.out.println(Cipher.keyedEncode("amlb mfhp7fcj jlgq fo tap s9a bjlslql aflipa lb hlg9b 210z t9ct", 16));
+
+		System.out.print("\nEnter a sentence/word/phrase to encode (press ENTER to confirm): ");
+		String user = sc.nextLine();
+		System.out.println("Your encoded message is: " + Cipher.encode(user));
 
 	}
 }
