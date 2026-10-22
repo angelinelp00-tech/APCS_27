@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Angeline Peng
+ *  Date: 10/22/26
 */
 
 package pkg;
@@ -13,7 +13,7 @@ public class BankAccount {
 	double balance;
 	boolean isActive
 
-	private static double nextAccountNumber = Math.random() * (1000 - 50) + 50;
+	private static int nextAccountNumber = (int)(Math.random() * (1000 - 50) + 50);
 
 	// -------CONSTRUCTORS-------
 	public BankAccount(){
@@ -28,15 +28,21 @@ public class BankAccount {
 		accNum = nextAccountNumber + 1;
 		isActive = true;
 		balance = 0.0;
+		isActive = true;
 	}
 
 	public BankAccount(String owner, double initialDep){
 		owner = owner;
 		accNum = nextAccountNumber + 1;
-		isActive = true;
 		balance = initialDep;
+		isActive = true;
 	}
 
 	// -------METHODS-------
-	
+	public static void returnStats(String owner, int accNum, double balance){
+		System.out.println("Owner: ");
+		System.out.println("Bank account number: #");
+		System.out.println("Balance: $");
+		return;
+	}
 }
