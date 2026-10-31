@@ -1,6 +1,6 @@
 /*
  *	Author:  Angeline Peng
- *  Date: 10/29/26
+ *  Date: 10/30/26
 */
 
 import pkg.*;
@@ -24,7 +24,34 @@ class starter {
 
 	public static void main(String args[]) {
 		// Your code goes below here
-		PooleDwarf test = new PooleDwarf();
+		PooleDwarf a = new PooleDwarf("Sneezy", 1);
+		PooleDwarf b = new PooleDwarf("Doc", 3);
+		PooleDwarf c = new PooleDwarf("Grumpy", 4);
+		PooleDwarf d = new PooleDwarf("Happy", 6);
+		PooleDwarf e = new PooleDwarf("Bashful", 3);
+		PooleDwarf f = new PooleDwarf("Dopey", 4);
+		PooleDwarf g = new PooleDwarf("Sneezy", 6);
+
+		int countDup = 0;
+		if(a.isSameName(b.getName())){
+			countDup++;
+		}
+		else if(a.isSameName(c.getName())){
+			countDup++;
+		}
+		else if(a.isSameName(d.getName())){
+			countDup++;
+		}
+		else if(a.isSameName(e.getName())){
+			countDup++;
+		}
+		else if(a.isSameName(f.getName())){
+			countDup++;
+		}
+		else if(a.isSameName(g.getName())){
+			countDup++;
+		}
+		System.out.println(a.getName() + " was the name with " + countDup + " matches!");
 		
 	}
 }

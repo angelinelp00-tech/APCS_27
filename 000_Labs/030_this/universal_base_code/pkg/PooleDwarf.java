@@ -1,6 +1,6 @@
 /*
  *	Author:  Angeline Peng
- *  Date: 10/29/26
+ *  Date: 10/30/26
 */
 
 package pkg;
@@ -39,17 +39,16 @@ public class PooleDwarf {
 		return;
 	}
 	
-	public void setAge(String age){
+	public void setAge(int age){
 		// Fix this method
 		this.age = age;
+		return;
 	}
 
 	public boolean isSameName(String name){
 		// Complete this method
-		boolean same;
-		if(this.name == name){
-			return same;
-		}
+		boolean same = this.name.equals(name);
+		return same;
 		
 	}
 }
