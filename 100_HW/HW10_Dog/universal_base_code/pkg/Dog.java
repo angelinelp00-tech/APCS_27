@@ -4,11 +4,10 @@ import java.util.Random;
 
 
 public class Dog {
-	public Dog() {
-		String name;
-		int age;
-		String breed;
-	}
+	String name;
+	int age;
+	String breed;
+
 	public Dog(){
 		name = "Clifford";
 		age = 3;
@@ -52,14 +51,13 @@ public class Dog {
 	public boolean isSleeping(){
 		int chance = (int)(Math.random());
 		boolean sleep;
-		if(chance = 0){
+		if(chance == 0){
 			sleep = true;
-			return sleep;
 		}
 		else{
 			sleep = false;
-			return sleep;
 		}
+		return sleep;
 	}
 	public void bark(){
 		System.out.println(name + " barks!");
